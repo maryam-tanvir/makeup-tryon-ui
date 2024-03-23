@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1019812925396",
+    "firebase_url": "https://virtual-makeup-tryon-5d3b1-default-rtdb.firebaseio.com",
+    "project_id": "virtual-makeup-tryon-5d3b1",
+    "storage_bucket": "virtual-makeup-tryon-5d3b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019812925396:android:ed42d6bccb4a2ab9411041",
+        "android_client_info": {
+          "package_name": "com.example.virtualmakeuptryon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuai45wvUvB3x6N8pQFkp7KJJYoBEgiSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019812925396:android:072ae6d1c2f53890411041",
+        "android_client_info": {
+          "package_name": "com.example.virtualmakeuptryonnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuai45wvUvB3x6N8pQFkp7KJJYoBEgiSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

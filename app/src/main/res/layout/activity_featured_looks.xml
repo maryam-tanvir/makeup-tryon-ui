@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeaturedLooks"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backarrow"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Featured Looks"
+            android:textSize="25dp"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:id="@+id/partyMakeup"
+                android:src="@drawable/partymakeup"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:id="@+id/formalMakeup"
+                android:src="@drawable/formalmakeup"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:id="@+id/simpleMakeup"
+                android:src="@drawable/simplemakeup"/>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="250dp"
+                android:id="@+id/bridalMakeup"
+                android:src="@drawable/bridalmakeup"
+                android:paddingLeft="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
