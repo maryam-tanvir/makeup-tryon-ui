@@ -121,6 +121,7 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+
     }
     private void categoriesRecycler() {
         //All Gradients
@@ -128,6 +129,7 @@ public class Dashboard extends AppCompatActivity {
         gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffDAAEBD, 0xffDAAEBD});
         gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff9AE3DC, 0xff9AE3DC});
         gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffb8d7f5, 0xffb8d7f5});
+
         ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
         categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.lipstickcategory, "Lipstick"));
         categoriesHelperClasses.add(new CategoriesHelperClass(gradient2, R.drawable.mascaracategory, "Mascara"));

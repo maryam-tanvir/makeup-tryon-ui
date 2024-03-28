@@ -60,7 +60,7 @@ public class SignUp extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                progressBar.setVisibility(View.GONE);
+                //progressBar.setVisibility(View.GONE);
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(SignUp.this, "Enter Email Address", Toast.LENGTH_SHORT).show();
                     return;
@@ -76,7 +76,9 @@ public class SignUp extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    //progressBar.setVisibility(View.GONE);
                                     Toast.makeText(SignUp.this, "Account created.", Toast.LENGTH_SHORT).show();
+                                    progressBar.setVisibility(View.GONE);
                                     Intent intent = new Intent(SignUp.this, Dashboard.class);
                                     startActivity(intent);
                                 } else {

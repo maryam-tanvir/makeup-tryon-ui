@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimpleLookTryon"
-    android:background="#ffffff">
+    tools:context=".Experiment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Simple Makeup Look"
+            android:text="Experiment"
             android:textSize="25dp"
             android:textAllCaps="true"
             android:padding="10dp"
@@ -65,4 +64,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>

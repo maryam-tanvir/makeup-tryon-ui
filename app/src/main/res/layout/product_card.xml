@@ -49,6 +49,7 @@
             android:layout_alignParentBottom="true"
             android:paddingTop="10dp"
             android:paddingLeft="50dp"
+            android:textAllCaps="true"
             android:textColor="#052BFF"
             android:layout_toRightOf="@id/productImage"/>
 

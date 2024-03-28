@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
             email = String.valueOf(editTextEmail.getText());
             password = String.valueOf(editTextPassword.getText());
 
-            progressBar.setVisibility(View.GONE);
+            //progressBar.setVisibility(View.GONE);
             if (TextUtils.isEmpty(email)){
                 Toast.makeText(Login.this, "Enter Email Address", Toast.LENGTH_SHORT).show();
                 return;
@@ -64,9 +64,11 @@ public class Login extends AppCompatActivity {
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
-                        progressBar.setVisibility(View.GONE);
+                        //progressBar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
+                            //progressBar.setVisibility(View.GONE);
                             Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
                             Intent intent = new Intent(Login.this, Dashboard.class);
                             startActivity(intent);
 

@@ -46,14 +46,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:id="@+id/partyMakeup"
+                android:id="@+id/uploadImage"
                 android:src="@drawable/addimage"
                 android:layout_marginTop="20dp"/>
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:id="@+id/formalMakeup"
+                android:id="@+id/tryLive"
                 android:src="@drawable/trylive"
                 android:layout_marginTop="20dp"/>
 

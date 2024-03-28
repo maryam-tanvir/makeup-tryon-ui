@@ -36,7 +36,7 @@ public class FeaturedLooks extends AppCompatActivity {
         partyMakeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TryOptions.class);
+                Intent intent = new Intent(getApplicationContext(), Experiment.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class FeaturedLooks extends AppCompatActivity {
         simpleMakeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TryOptions.class);
+                Intent intent = new Intent(getApplicationContext(), SimpleLookTryon.class);
                 startActivity(intent);
             }
         });
