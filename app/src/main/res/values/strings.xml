@@ -9,4 +9,10 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="lipsticksApi">https://2b02-34-67-162-176.ngrok-free.app/apply-makeup/?choice=lips</string>
+    <string name="blushApi">https://ef34-34-143-224-199.ngrok-free.app/apply-makeup/?choice=blush</string>
+    <string name="redLipstickApi">https://ef34-34-143-224-199.ngrok-free.app/apply-makeup/?choice=blush</string>
+    <string name="apiUrl">https://bede-34-87-58-46.ngrok-free.app</string>
+    <!--    <string name="pinkLipstickApi">https://1537-34-141-189-11.ngrok-free.app/apply-makeup/?choice=lips&red=50000&green=10&blue=100</string>-->
+
 </resources>

@@ -1,68 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Experiment">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/buttonOpenGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Gallery"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:orientation="vertical">
+        android:layout_below="@id/buttonOpenGallery"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize">
-
-            <ImageView
-                android:id="@+id/back_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/backarrow"
-                android:padding="15dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"/>
-
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Experiment"
-            android:textSize="25dp"
-            android:textAllCaps="true"
-            android:padding="10dp"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/selectImageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Select Image from Gallery"
-                android:onClick="selectImageFromGallery" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/displayImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="30dp"
-                android:src="@drawable/applogo"
-                app:elevation="6dp"
-                android:contentDescription="Insert Image" />
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

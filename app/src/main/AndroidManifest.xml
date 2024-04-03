@@ -15,6 +15,24 @@
         android:theme="@style/Theme.VirtualMakeupTryonNew"
         tools:targetApi="31">
         <activity
+            android:name=".PurpleLipstickTryon"
+            android:exported="false" />
+        <activity
+            android:name=".MaroonLipstickTryon"
+            android:exported="false" />
+        <activity
+            android:name=".BrownLipstickTryon"
+            android:exported="false" />
+        <activity
+            android:name=".RedLipstickTryon"
+            android:exported="false" />
+        <activity
+            android:name=".PinkLipstickTryon"
+            android:exported="false" />
+        <activity
+            android:name=".RedLipstickActivity"
+            android:exported="false" />
+        <activity
             android:name=".Experiment"
             android:exported="false" />
         <activity

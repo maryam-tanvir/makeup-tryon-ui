@@ -1,4 +1,7 @@
 package com.example.virtualmakeuptryonnew;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -7,8 +10,10 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,25 +33,40 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
-public class Experiment extends Activity {
+public class BrownLipstickTryon extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_GALLERY = 100;
     private Button buttonOpenGallery;
     private ImageView imageView;
+    ProgressBar progressBar;
+    ImageView back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_experiment);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_brown_lipstick_tryon);
 
         buttonOpenGallery = findViewById(R.id.buttonOpenGallery);
         imageView = findViewById(R.id.imageView);
+        progressBar = findViewById(R.id.progressBar);
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         buttonOpenGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openGallery();
+                progressBar.setVisibility(View.VISIBLE);
             }
+
         });
     }
 
@@ -93,9 +113,10 @@ public class Experiment extends Activity {
                 .addFormDataPart("file", "image.png", RequestBody.create(MediaType.parse("image/*"), imageBytes))
                 .build();
 
+        String baseUrl = getResources().getString(R.string.apiUrl);
         // Create POST request
         Request request = new Request.Builder()
-                .url(getResources().getString(R.string.lipsticksApi))
+                .url(baseUrl + "/apply-makeup/?choice=lips&red=150&green=75&blue=0")
                 .post(requestBody)
                 .build();
 
@@ -115,6 +136,7 @@ public class Experiment extends Activity {
                                 ByteArrayInputStream stream = new ByteArrayInputStream(response.body().bytes());
                                 Bitmap img = BitmapFactory.decodeStream(stream);
                                 imageView.setImageBitmap(img);
+                                progressBar.setVisibility(View.GONE);
 
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
