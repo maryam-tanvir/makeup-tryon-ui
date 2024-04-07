@@ -1,11 +1,13 @@
 package com.example.virtualmakeuptryonnew;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,8 +38,10 @@ public class MascaraListAdapter extends ArrayAdapter {
         TextView lsName = listItemView.findViewById(R.id.productName);
         TextView lsPrice = listItemView.findViewById(R.id.productPrice);
         ImageView lsImage = listItemView.findViewById(R.id.productImage);
+        Button tryOnButton = listItemView.findViewById(R.id.tryonButton);
 
         Mascara mascara = mascaraList.get(position);
+        listItemView.setTag(mascara.getName());
 
         lsName.setText(mascara.getName());
         lsPrice.setText(mascara.getPrice());
@@ -46,6 +50,22 @@ public class MascaraListAdapter extends ArrayAdapter {
 
         // Log the image URL for debugging
         Log.d("ListAdapter", "Image URL: " + imageUrl);
+
+        tryOnButton.setText("Virtual Try-On");
+
+        tryOnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String productName = (String) listItemView.getTag();
+
+                Intent intent = BlushTryonIntents.getTryOnIntent(productName, mContext);
+                if (intent != null) {
+                    mContext.startActivity(intent);
+                } else {
+                    // Handle case where intent cannot be created (e.g., missing information)
+                }
+            }
+        });
 
         // Placeholder and error handling (optional)
 //        Picasso.get()
