@@ -7,15 +7,15 @@ public class LipsticksTryonIntents {
 
     public static Intent getTryOnIntent(String productName, Context context) {
         switch (productName) {
-            case "Red Lipstick":
+            case "Red Matte Lipstick":
                 return new Intent(context, RedLipstickTryon.class);
-            case "Pink Lipstick":
+            case "Pink Matte Lipstick":
                 return new Intent(context, PinkLipstickTryon.class);
-            case "Brown lipstick":
+            case "Brown Matte Lipstick":
                 return new Intent(context, BrownLipstickTryon.class);
-            case "Maroon Lipstick":
+            case "Maroon Matte Lipstick":
                 return new Intent(context, MaroonLipstickTryon.class);
-            case "Purple Lipstick":
+            case "Purple Matte Lipstick":
                 return new Intent(context, PurpleLipstickTryon.class);
             // ... (add more cases as needed)
             default:
