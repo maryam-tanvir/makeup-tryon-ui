@@ -52,7 +52,7 @@ public class FeaturedLooks extends AppCompatActivity {
         formalMakeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TryOptions.class);
+                Intent intent = new Intent(getApplicationContext(), FormalMakeupTryon.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class FeaturedLooks extends AppCompatActivity {
         bridalMakeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TryOptions.class);
+                Intent intent = new Intent(getApplicationContext(), BridalMakeupTryon.class);
                 startActivity(intent);
             }
         });

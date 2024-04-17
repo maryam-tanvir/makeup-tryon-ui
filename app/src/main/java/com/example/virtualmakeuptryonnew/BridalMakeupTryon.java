@@ -33,7 +33,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
-public class SimpleLookTryon extends AppCompatActivity {
+public class BridalMakeupTryon extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_GALLERY = 100;
     private Button buttonOpenGallery;
@@ -45,7 +45,7 @@ public class SimpleLookTryon extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_simple_look_tryon);
+        setContentView(R.layout.activity_bridal_makeup_tryon);
 
         buttonOpenGallery = findViewById(R.id.buttonOpenGallery);
         imageView = findViewById(R.id.imageView);
