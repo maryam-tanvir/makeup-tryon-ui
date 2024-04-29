@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -36,7 +37,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 public class PinkLipstickTryon extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_GALLERY = 100;
-    private Button buttonOpenGallery;
+    private Button buttonOpenGallery, buyProduct;
     private ImageView imageView;
     ProgressBar progressBar;
     ImageView back_btn;
@@ -48,6 +49,7 @@ public class PinkLipstickTryon extends AppCompatActivity {
         setContentView(R.layout.activity_pink_lipstick_tryon);
 
         buttonOpenGallery = findViewById(R.id.buttonOpenGallery);
+        buyProduct = findViewById(R.id.buyProduct);
         imageView = findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
         back_btn = findViewById(R.id.back_btn);
@@ -66,7 +68,17 @@ public class PinkLipstickTryon extends AppCompatActivity {
                 openGallery();
                 progressBar.setVisibility(View.VISIBLE);
             }
+        });
 
+        buyProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // URL to open
+                String url = "https://cozmetica.pk/products/la-girl-lip-attraction-2-lipstick-love-potion?pr_prod_strat=e5_desc&pr_rec_id=ecc303a1b&pr_rec_pid=7750112182433&pr_ref_pid=7750111953057&pr_seq=uniform";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
         });
     }
 

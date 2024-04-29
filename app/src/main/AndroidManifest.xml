@@ -15,6 +15,66 @@
         android:theme="@style/Theme.VirtualMakeupTryonNew"
         tools:targetApi="31">
         <activity
+            android:name=".MagentaKajalTryon"
+            android:exported="false" />
+        <activity
+            android:name=".BrownKajalTryon"
+            android:exported="false" />
+        <activity
+            android:name=".BlueKajalTryon"
+            android:exported="false" />
+        <activity
+            android:name=".BlackKajalTryon"
+            android:exported="false" />
+        <activity
+            android:name=".GreyKajalTryon"
+            android:exported="false" />
+        <activity
+            android:name=".ProductKajal"
+            android:exported="false" />
+        <activity
+            android:name=".BrownMascaraTryon"
+            android:exported="false" />
+        <activity
+            android:name=".SkyCaramelLensTryon"
+            android:exported="false" />
+        <activity
+            android:name=".HighlightBlueLensTryon"
+            android:exported="false" />
+        <activity
+            android:name=".EdgeBrownLensTryon"
+            android:exported="false" />
+        <activity
+            android:name=".HazelLensTryon"
+            android:exported="false" />
+        <activity
+            android:name=".AmberGreyLensTryon"
+            android:exported="false" />
+        <activity
+            android:name=".ProductLens"
+            android:exported="false" />
+        <activity
+            android:name=".ActivtyLens"
+            android:exported="false" />
+        <activity
+            android:name=".SparklingPinkBlushTryon"
+            android:exported="false" />
+        <activity
+            android:name=".RustyBrownBlushTryon"
+            android:exported="false" />
+        <activity
+            android:name=".RoseBlushTryon"
+            android:exported="false" />
+        <activity
+            android:name=".MaltBlushTryon"
+            android:exported="false" />
+        <activity
+            android:name=".DustyPinkBlushTryon"
+            android:exported="false" />
+        <activity
+            android:name=".ProductBlush"
+            android:exported="false" />
+        <activity
             android:name=".BridalMakeupTryon"
             android:exported="false" />
         <activity

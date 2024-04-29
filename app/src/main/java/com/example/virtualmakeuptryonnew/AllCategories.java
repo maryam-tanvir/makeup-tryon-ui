@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 public class AllCategories extends AppCompatActivity {
 
-    ImageView back_btn;
+    ImageView back_btn, lipstickCategory, blushCategory, lensCategory, lashesCategory, kajalCategory;
     Button viewProducts1, viewProducts2, viewProducts3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,11 @@ public class AllCategories extends AppCompatActivity {
 
         // hooks
         back_btn = findViewById(R.id.back_btn);
-        viewProducts1 = findViewById(R.id.viewProducts1);
-        viewProducts2 = findViewById(R.id.viewProducts2);
-        viewProducts3 = findViewById(R.id.viewProducts3);
+        lipstickCategory = findViewById(R.id.lipstickCategory);
+        blushCategory = findViewById(R.id.blushCategory);
+        lensCategory = findViewById(R.id.lensCategory);
+        lashesCategory = findViewById(R.id.eyelashesCategory);
+        kajalCategory = findViewById(R.id.kajalCategory);
 
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +35,7 @@ public class AllCategories extends AppCompatActivity {
             }
         });
 
-        viewProducts1.setOnClickListener(new View.OnClickListener() {
+        lipstickCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ProductLipsticks.class);
@@ -41,18 +43,18 @@ public class AllCategories extends AppCompatActivity {
             }
         });
 
-        viewProducts2.setOnClickListener(new View.OnClickListener() {
+        blushCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ProductMascara.class);
+                Intent intent = new Intent(getApplicationContext(), ProductBlush.class);
                 startActivity(intent);
             }
         });
 
-        viewProducts3.setOnClickListener(new View.OnClickListener() {
+        lensCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ProductEyebrow.class);
+                Intent intent = new Intent(getApplicationContext(), ProductLens.class);
                 startActivity(intent);
             }
         });

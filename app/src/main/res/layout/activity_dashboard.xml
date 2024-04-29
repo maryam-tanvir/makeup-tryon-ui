@@ -185,22 +185,21 @@
                                 android:background="@drawable/card_3">
 
                                 <ImageView
+                                    android:id="@+id/blushIcon"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/eyebrowIcon"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginEnd="10dp"
-                                    android:layout_marginBottom="10dp"
                                     android:elevation="8dp"
-                                    android:src="@drawable/eyebrowicon" />
+                                    android:src="@drawable/blush" />
                             </RelativeLayout>
 
                             <TextView
                                 android:gravity="center_horizontal"
                                 android:layout_height="wrap_content"
                                 android:layout_width="match_parent"
-                                android:text="Eyebrow"
+                                android:text="Blush"
                                 android:textAlignment="center" />
 
                         </LinearLayout>
@@ -220,20 +219,20 @@
                                 <ImageView
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:id="@+id/foundationIcon"
+                                    android:id="@+id/lensIcon"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
                                     android:elevation="8dp"
-                                    android:src="@drawable/foundation" />
+                                    android:src="@drawable/lensicon" />
                             </RelativeLayout>
 
                             <TextView
                                 android:gravity="center_horizontal"
                                 android:layout_height="wrap_content"
                                 android:layout_width="match_parent"
-                                android:text="Foundation"
+                                android:text="Lens"
                                 android:textAlignment="center" />
 
                         </LinearLayout>

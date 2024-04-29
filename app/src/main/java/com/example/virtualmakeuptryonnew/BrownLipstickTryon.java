@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -36,7 +37,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 public class BrownLipstickTryon extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_GALLERY = 100;
-    private Button buttonOpenGallery;
+    private Button buttonOpenGallery, buyProduct;
     private ImageView imageView;
     ProgressBar progressBar;
     ImageView back_btn;
@@ -48,6 +49,7 @@ public class BrownLipstickTryon extends AppCompatActivity {
         setContentView(R.layout.activity_brown_lipstick_tryon);
 
         buttonOpenGallery = findViewById(R.id.buttonOpenGallery);
+        buyProduct = findViewById(R.id.buyProduct);
         imageView = findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
         back_btn = findViewById(R.id.back_btn);
@@ -66,8 +68,19 @@ public class BrownLipstickTryon extends AppCompatActivity {
                 openGallery();
                 progressBar.setVisibility(View.VISIBLE);
             }
-
         });
+
+        buyProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // URL the page would be directed to is this
+                String url = "https://cozmetica.pk/products/la-girl-lip-attraction-lipstick-enticing?pr_prod_strat=e5_desc&pr_rec_id=16fe18581&pr_rec_pid=7750111461537&pr_ref_pid=7750112018593&pr_seq=uniform";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void openGallery() {

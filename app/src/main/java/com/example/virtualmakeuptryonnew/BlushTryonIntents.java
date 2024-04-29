@@ -7,16 +7,16 @@ public class BlushTryonIntents {
 
     public static Intent getTryOnIntent(String productName, Context context) {
         switch (productName) {
-            case "Brown Mascara":
-                return new Intent(context, PinkBlushTryon.class);
-            case "Blue Mascara":
-                return new Intent(context, KajalTestApi.class);
-            case "Brown lipstick":
-                return new Intent(context, BrownLipstickTryon.class);
-            case "Maroon Lipstick":
-                return new Intent(context, MaroonLipstickTryon.class);
-            case "Purple Lipstick":
-                return new Intent(context, PurpleLipstickTryon.class);
+            case "Dusty Pink Blush":
+                return new Intent(context, DustyPinkBlushTryon.class);
+            case "Malt Blush":
+                return new Intent(context, MaltBlushTryon.class);
+            case "Rose Blush":
+                return new Intent(context, RoseBlushTryon.class);
+            case "Rusty Brown Blush":
+                return new Intent(context, RustyBrownBlushTryon.class);
+            case "Sparkling Pink Blush":
+                return new Intent(context, SparklingPinkBlushTryon.class);
             // ... (add more cases as needed)
             default:
                 return null; // Or provide a default intent if needed

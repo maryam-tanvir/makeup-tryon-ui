@@ -24,25 +24,25 @@ public class Dashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Button viewAll;
     RecyclerView.Adapter adapter;
-    ImageView lipstickIcon, mascaraIcon, eyebrowIcon, featuredLooks;
+    ImageView lipstickIcon, mascaraIcon, blushIcon, lensIcon, featuredLooks;
     private GradientDrawable gradient1, gradient2, gradient3, gradient4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_dashboard);
-
-        ImageView menuImage = findViewById(R.id.menuImage);
-
         NavigationView navigationView = findViewById(R.id.navigationView);
         View headerView = navigationView.getHeaderView(0);
+
+        ImageView menuImage = findViewById(R.id.menuImage);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         logout_btn = headerView.findViewById(R.id.logout_btn);
         viewAll = findViewById(R.id.viewAllButton);
         lipstickIcon = findViewById(R.id.lipsticksIcon);
         mascaraIcon = findViewById(R.id.mascaraIcon);
-        eyebrowIcon = findViewById(R.id.eyebrowIcon);
+        blushIcon = findViewById(R.id.blushIcon);
+        lensIcon = findViewById(R.id.lensIcon);
         featuredLooks = findViewById(R.id.featuredLooksImage);
 
         //Hooks
@@ -105,10 +105,18 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-        eyebrowIcon.setOnClickListener(new View.OnClickListener() {
+        blushIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ProductEyebrow.class);
+                Intent intent = new Intent(getApplicationContext(), ProductBlush.class);
+                startActivity(intent);
+            }
+        });
+
+        lensIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ProductLens.class);
                 startActivity(intent);
             }
         });
