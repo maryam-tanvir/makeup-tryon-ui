@@ -129,7 +129,7 @@ public class RoseBlushTryon extends AppCompatActivity {
         String baseUrl = getResources().getString(R.string.apiUrl);
         // Create POST request
         Request request = new Request.Builder()
-                .url(baseUrl + "/apply-makeup/?choice=blush&red=255&green=87&blue=51")
+                .url(baseUrl + "/apply-makeup/?choice=blush&red=255&green=10&blue=10")
                 .post(requestBody)
                 .build();
 

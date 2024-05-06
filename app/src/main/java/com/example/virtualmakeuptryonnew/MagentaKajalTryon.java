@@ -75,7 +75,7 @@ public class MagentaKajalTryon extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // URL to open
-                String url = "https://www.inglotpk.com/products/kohl-pencil?variant=42731963777264";
+                String url = "hhttps://www.inglotpk.com/products/kohl-pencil?variant=42731963613424";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);

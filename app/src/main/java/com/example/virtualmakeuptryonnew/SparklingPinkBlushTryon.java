@@ -129,7 +129,7 @@ public class SparklingPinkBlushTryon extends AppCompatActivity {
         String baseUrl = getResources().getString(R.string.apiUrl);
         // Create POST request
         Request request = new Request.Builder()
-                .url(baseUrl + "/apply-makeup/?choice=blush&red=245&green=206&blue=230")
+                .url(baseUrl + "/apply-makeup/?choice=blush&red=245&green=0&blue=0")
                 .post(requestBody)
                 .build();
 

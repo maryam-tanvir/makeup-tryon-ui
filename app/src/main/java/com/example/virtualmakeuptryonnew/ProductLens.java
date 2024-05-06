@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +27,7 @@ public class ProductLens extends AppCompatActivity {
     List<Lens> lenslist;
     DatabaseReference lensDbRef;
     ImageView back_btn;
+    ProgressBar progressBar;
     Button tryonButton;
 
     @Override
@@ -38,6 +40,7 @@ public class ProductLens extends AppCompatActivity {
         lenslist = new ArrayList<>();
         back_btn = findViewById(R.id.back_btn);
         tryonButton = findViewById(R.id.tryonButton);
+        progressBar = findViewById(R.id.progressBar);
 
 
         lensDbRef = FirebaseDatabase.getInstance().getReference("Lens");
@@ -48,6 +51,8 @@ public class ProductLens extends AppCompatActivity {
                 finish();
             }
         });
+
+        progressBar.setVisibility(View.VISIBLE);
         lensDbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -60,10 +65,12 @@ public class ProductLens extends AppCompatActivity {
 
                 LensListAdapter adapter = new LensListAdapter(ProductLens.this, lenslist);
                 myListView.setAdapter(adapter);
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                progressBar.setVisibility(View.GONE);
 
             }
         });

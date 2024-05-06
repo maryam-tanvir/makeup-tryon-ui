@@ -24,7 +24,7 @@ public class AllCategories extends AppCompatActivity {
         lipstickCategory = findViewById(R.id.lipstickCategory);
         blushCategory = findViewById(R.id.blushCategory);
         lensCategory = findViewById(R.id.lensCategory);
-        lashesCategory = findViewById(R.id.eyelashesCategory);
+        //lashesCategory = findViewById(R.id.eyelashesCategory);
         kajalCategory = findViewById(R.id.kajalCategory);
 
         back_btn.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +55,14 @@ public class AllCategories extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ProductLens.class);
+                startActivity(intent);
+            }
+        });
+
+        kajalCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ProductKajal.class);
                 startActivity(intent);
             }
         });

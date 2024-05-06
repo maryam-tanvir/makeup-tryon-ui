@@ -59,7 +59,7 @@ public class KajalListAdapter extends ArrayAdapter {
             public void onClick(View v) {
                 String productName = (String) listItemView.getTag();
 
-                Intent intent = LipsticksTryonIntents.getTryOnIntent(productName, mContext);
+                Intent intent = KajalTryonIntents.getTryOnIntent(productName, mContext);
                 if (intent != null) {
                     mContext.startActivity(intent);
                 } else {

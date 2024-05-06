@@ -11,7 +11,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="lipsticksApi">https://2b02-34-67-162-176.ngrok-free.app/apply-makeup/?choice=lips</string>
 
-    <string name="apiUrl">https://12f1-34-125-252-31.ngrok-free.app</string>
+    <string name="apiUrl">https://8efe-34-71-60-236.ngrok-free.app</string>
     <!--    <string name="pinkLipstickApi">https://1537-34-141-189-11.ngrok-free.app/apply-makeup/?choice=lips&red=50000&green=10&blue=100</string>-->
 
 </resources>

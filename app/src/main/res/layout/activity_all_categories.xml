@@ -167,8 +167,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/eyelashesCategory"
-                android:src="@drawable/eyelashescategory"/>
+                android:id="@+id/kajalCategory"
+                android:src="@drawable/kajalcategory"/>
 
 <!--            <ImageView-->
 <!--                android:layout_width="100dp"-->
@@ -199,44 +199,44 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/kajalCategory"
-                android:src="@drawable/kajal"/>
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Lipstick"-->
-<!--                android:textSize="30sp"-->
-<!--                android:fontFamily="@font/poppins_bold"-->
-<!--                android:padding="25dp"/>-->
-
-<!--            <Button-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="View products"-->
-<!--                android:background="#00000000"-->
-<!--                android:padding="20dp"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:textColor="#000000"/>-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginBottom="20dp">-->
 
 <!--            <ImageView-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:src="@drawable/lipstick"-->
-<!--                android:layout_alignParentRight="true"-->
-<!--                android:layout_centerVertical="true"/>-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:id="@+id/kajalCategory"-->
+<!--                android:src="@drawable/kajal"/>-->
 
-        </RelativeLayout>
+<!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Lipstick"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textSize="30sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:fontFamily="@font/poppins_bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="25dp"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <Button&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="View products"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="#00000000"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:padding="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textColor="#000000"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="100dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@drawable/lipstick"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerVertical="true"/>&ndash;&gt;-->
+
+<!--        </RelativeLayout>-->
 
     </LinearLayout>
 

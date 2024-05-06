@@ -41,6 +41,7 @@ public class BlushListAdapter extends ArrayAdapter {
         Button tryOnButton = listItemView.findViewById(R.id.tryonButton);
 
         Blush blush = blushList.get(position);
+        listItemView.setTag(blush.getName());
 
         lsName.setText(blush.getName());
         lsPrice.setText(blush.getPrice());

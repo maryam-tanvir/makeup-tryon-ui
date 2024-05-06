@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +27,7 @@ public class ProductLipsticks extends AppCompatActivity {
     List<Lipsticks> lipstickslist;
     DatabaseReference lipsticksDbRef;
     ImageView back_btn;
+    ProgressBar progressBar;
 
     Button tryonButton;
 
@@ -39,6 +41,7 @@ public class ProductLipsticks extends AppCompatActivity {
         lipstickslist = new ArrayList<>();
         back_btn = findViewById(R.id.back_btn);
         tryonButton = findViewById(R.id.tryonButton);
+        progressBar = findViewById(R.id.progressBar);
 
 
         lipsticksDbRef = FirebaseDatabase.getInstance().getReference("Lipsticks");
@@ -49,6 +52,8 @@ public class ProductLipsticks extends AppCompatActivity {
                 finish();
             }
         });
+
+        progressBar.setVisibility(View.VISIBLE);
         lipsticksDbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -61,11 +66,13 @@ public class ProductLipsticks extends AppCompatActivity {
 
                 LipsticksListAdapter adapter = new LipsticksListAdapter(ProductLipsticks.this, lipstickslist);
                 myListView.setAdapter(adapter);
+
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                progressBar.setVisibility(View.GONE);
             }
         });
 
