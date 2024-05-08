@@ -2,6 +2,7 @@ package com.example.virtualmakeuptryonnew;
 
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -24,7 +25,7 @@ public class Dashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     Button viewAll;
     RecyclerView.Adapter adapter;
-    ImageView lipstickIcon, mascaraIcon, blushIcon, lensIcon, featuredLooks;
+    ImageView lipstickIcon, mascaraIcon, blushIcon, lensIcon, featuredLooks, shopping;
     private GradientDrawable gradient1, gradient2, gradient3, gradient4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class Dashboard extends AppCompatActivity {
         blushIcon = findViewById(R.id.blushIcon);
         lensIcon = findViewById(R.id.lensIcon);
         featuredLooks = findViewById(R.id.featuredLooksImage);
+        shopping = findViewById(R.id.shopping);
 
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
@@ -77,6 +79,16 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+            }
+        });
+
+        shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://cozmetica.pk/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
                 startActivity(intent);
             }
         });
@@ -136,14 +148,14 @@ public class Dashboard extends AppCompatActivity {
         gradient2 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff95CCE4, 0xff95CCE4});
         gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffDAAEBD, 0xffDAAEBD});
         gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff9AE3DC, 0xff9AE3DC});
-        gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffb8d7f5, 0xffb8d7f5});
+        gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffdb9be6, 0xffdb9be6});
 
         ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.lipstickcategory, "Lipstick"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient2, R.drawable.mascaracategory, "Mascara"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient3, R.drawable.eyebrowcategory, "Eyebrows"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient4, R.drawable.lipstick, "Blush"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.lipstick, "Foundation"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.lipstickcategorynew, "Lipstick"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient2, R.drawable.blushcategorynew, "Blush"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient3, R.drawable.lenscategorynew, "Eye Lens"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient4, R.drawable.kajalcategorynew, "Kajal"));
+        //categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.lipstick, "Foundation"));
         categoriesRecycler.setHasFixedSize(true);
         adapter = new CategoriesAdapter(categoriesHelperClasses);
         categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -156,8 +168,8 @@ public class Dashboard extends AppCompatActivity {
         featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         ArrayList<FeaturedHelperClass> featuredProducts = new ArrayList<>();
         featuredProducts.add(new FeaturedHelperClass(R.drawable.matt_lipstick, "Matte Lipstick", "Lorem opium lorem opium lorem opium "));
-        featuredProducts.add(new FeaturedHelperClass(R.drawable.bluemascara, "Blue Mascara", "Lorem opium lorem opium lorem opium "));
-        featuredProducts.add(new FeaturedHelperClass(R.drawable.browneyebrow, "Brown Eyebrow Pencil", "Lorem opium lorem opium lorem opium "));
+        featuredProducts.add(new FeaturedHelperClass(R.drawable.skyCaramelLens, "Sky Caramel Eyelens", "Lorem opium lorem opium lorem opium "));
+        featuredProducts.add(new FeaturedHelperClass(R.drawable.DustyPinkBlush, "Dusty Pink Lens", "Lorem opium lorem opium lorem opium "));
         adapter = new FeaturedAdapter(featuredProducts);
         featuredRecycler.setAdapter(adapter);
     }

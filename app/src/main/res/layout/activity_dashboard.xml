@@ -48,6 +48,7 @@
                 android:layout_centerVertical="true"
                 android:layout_height="30dp"
                 android:layout_width="30dp"
+                android:id="@+id/shopping"
                 android:padding="5dp"
                 android:src="@drawable/cart" />
         </RelativeLayout>
@@ -187,7 +188,7 @@
                                 <ImageView
                                     android:id="@+id/blushIcon"
                                     android:layout_width="50dp"
-                                    android:layout_height="50dp"
+                                    android:layout_height="40dp"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginEnd="10dp"

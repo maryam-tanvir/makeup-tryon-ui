@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -36,7 +37,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 public class HighlightBlueLensTryon extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_GALLERY = 100;
-    private Button buttonOpenGallery;
+    private Button buttonOpenGallery, buyProduct;
     private ImageView imageView;
     ProgressBar progressBar;
     ImageView back_btn;
@@ -50,6 +51,7 @@ public class HighlightBlueLensTryon extends AppCompatActivity {
         buttonOpenGallery = findViewById(R.id.buttonOpenGallery);
         imageView = findViewById(R.id.imageView);
         progressBar = findViewById(R.id.progressBar);
+        buyProduct = findViewById(R.id.buyProduct);
         back_btn = findViewById(R.id.back_btn);
 
         back_btn.setOnClickListener(new View.OnClickListener() {
@@ -62,11 +64,20 @@ public class HighlightBlueLensTryon extends AppCompatActivity {
         buttonOpenGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 openGallery();
                 progressBar.setVisibility(View.VISIBLE);
             }
+        });
 
+        buyProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // URL to open
+                String url = "https://eyelens.pk/products/highlight-blue-1";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
         });
     }
 
