@@ -168,8 +168,8 @@ public class Dashboard extends AppCompatActivity {
         featuredRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         ArrayList<FeaturedHelperClass> featuredProducts = new ArrayList<>();
         featuredProducts.add(new FeaturedHelperClass(R.drawable.matt_lipstick, "Matte Lipstick", "Lorem opium lorem opium lorem opium "));
-        featuredProducts.add(new FeaturedHelperClass(R.drawable.skyCaramelLens, "Sky Caramel Eyelens", "Lorem opium lorem opium lorem opium "));
-        featuredProducts.add(new FeaturedHelperClass(R.drawable.DustyPinkBlush, "Dusty Pink Lens", "Lorem opium lorem opium lorem opium "));
+        featuredProducts.add(new FeaturedHelperClass(R.drawable.skycaramellens, "Sky Caramel Eyelens", "Lorem opium lorem opium lorem opium "));
+        featuredProducts.add(new FeaturedHelperClass(R.drawable.dustypinkblush, "Dusty Pink Lens", "Lorem opium lorem opium lorem opium "));
         adapter = new FeaturedAdapter(featuredProducts);
         featuredRecycler.setAdapter(adapter);
     }
